@@ -1,0 +1,628 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #3A1F03;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    padding: 7px 0;
+    white-space: nowrap;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.nav-icons a {
+    padding: 7px;
+    color: grey;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li a, .company-name a {
+    text-decoration: none;
+    color: black;
+    
+    font-size: 14px;
+}
+
+nav ul li a{
+padding: 19px 24px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+    height: 520px;
+    background-color: #fbf3ea;
+}
+
+.grid1, .grid4 {
+    grid-column: 1 / 5;
+
+}
+
+.grid2 {
+    text-align: center;
+    align-content: center;
+    font-size: 14px;
+}
+
+
+.grid2, .grid5 {
+    grid-column: 5 / 9
+}
+
+.grid3, .grid6 {
+    grid-column: 9 / 13;
+}
+
+.grid1, .grid4, .grid2, .grid5, .grid3, .grid6, .grid7 {
+    background-color: #fbf3ea;
+    border: 0.2px solid rgb(231, 229, 229);
+}
+
+.grid1, .grid2, .grid3 {
+    grid-row: 1 / 4;
+}
+
+.grid4, .grid5, .grid6 {
+    grid-row: 4 / 17
+}
+
+.grid5 {
+    border-radius: 15px;
+}
+
+.grid5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 8px solid white;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.grid7 {
+    grid-column: 1 / 13;
+    grid-row: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.grid7-content {
+    margin: 0 320px;
+}
+
+.grid7 p:first-child {
+    font-size: 27px;
+    margin: 0 0 12px 0;
+    font-weight: 100;
+}
+
+.grid7 p:nth-child(2) {
+    font-size: 12px;
+    padding: 0;
+    margin: 0 0 12px 0;
+    line-height: 22px;
+}
+
+.grid7 button {
+    background-color: #fbf9f7;   
+    outline: none;
+    border: 1px solid rgb(219, 208, 188);
+    padding: 9px 18px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+.grid4, .grid6 {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+}
+
+.inner-grid {
+    grid-column: 2 / 3;
+    grid-row: 5 / 10;
+}
+
+.inner-grid2 {
+    grid-column: 3/4;
+    grid-row: 5 / 10;
+}
+
+.inner-grid, .inner-grid2 {
+    background-color: #eae0d6;
+}
+
+.row {
+    height: 40px;
+    background-color: #eae0d6;
+    margin-top: -3px;
+    font-size: 12px;
+    width: 550%;
+    align-content: center;
+}
+
+.row-image {
+    height: 370px;
+}
+
+.row-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.products-container {
+    display: grid;
+    grid-template-areas:
+    'products-container-grid1 products-container-grid1 products-container-grid1'
+    'products-container-grid2 products-container-grid3 products-container-grid4'
+    'products-container-info products-container-info products-container-info';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 2fr 0.01fr;
+    gap: 20px;
+    margin: 15px 20px;
+    background-color: #eae0d6;
+    border-radius: 12px;
+    padding: 0 20px;
+}
+
+.products-container-grid1 {
+    grid-area: products-container-grid1;
+    margin: 12px 200px 0 200px;
+    text-align: center;
+}
+
+.products-container-grid2 {
+    grid-area: products-container-grid2;
+}
+
+.products-container-grid3 {
+    grid-area: products-container-grid3;
+    
+}
+
+.products-container-grid4 {
+    grid-area: products-container-grid4;
+    
+}
+.products-container-grid2, .products-container-grid3, .products-container-grid4, .products-container-grid5 {
+    border-radius: 23px;
+    margin: 0;
+
+}
+
+.products-container-grid2 img, .products-container-grid3 img, .products-container-grid4 img, .products-container-grid5 img {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 15px;
+}
+
+.products-container-grid1 p:last-child, .products-container-grid1-2 p:last-child {
+    font-size: 28px;
+    margin: 0;
+}
+
+.products-container-info {
+    grid-area: products-container-info;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-container-info p {
+    font-size: 1vw;
+}
+
+.products-container-2 {
+    display: grid;
+    grid-template-areas:
+    'products-container-grid1-2 products-container-grid1-2 products-container-grid1-2 products-container-grid1-2'
+    'products-container-grid2 products-container-grid3 products-container-grid4 products-container-grid5'
+    'products-container-info products-container-info products-container-info products-container-info'
+    'arrow-button arrow-button arrow-button arrow-button';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 2fr 0.01fr 0.01fr;
+    gap: 20px;
+    margin: 15px 20px;
+    border: 2px solid rgb(224, 224, 224);
+    border-radius: 12px;
+    padding: 10px 20px;
+}
+
+.products-container-grid5 {
+    grid-area: products-container-grid5;
+}
+
+.products-container-grid1-2{
+    grid-area: products-container-grid1-2;
+    margin: 12px 350px 0 350px;
+    text-align: center;
+}
+
+.arrow-button1 {
+    padding: 3px 25px;
+    font-size: 23px;
+    border: 1px solid #b7b2ac;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.arrow-button {
+    align-content: center;
+    grid-area: arrow-button;
+    text-align: center;
+}
+
+.four-backgrounds-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.four-backgrounds-container-image img {
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    height: auto;
+}
+
+.skincare-ingredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    background-color: #fbf3ea;
+    padding: 85px 30px 0 30px;
+    gap: 30px;
+  
+}
+
+
+
+.skincare-ingredients-heading p:first-child {
+    font-size: 14px;
+    margin: 0;
+}
+
+.skincare-ingredients-heading p:nth-child(2) {
+    font-size: 35px;
+    margin: 10px 0;
+    line-height: 45px;
+    font-weight: 100;
+}
+
+.skincare-ingredients-info-container {
+    margin-top: 145px;
+}
+
+.skincare-ingredients-heading2 {
+    font-size: 19px;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-top: 1px solid #d4d4d4;
+    width: 100%;
+    padding: 24px 0;
+    cursor: pointer;
+    background-color: #fbf3ea;
+}
+
+.skincare-ingredients-info{
+     font-size: 12px;
+     line-height: 20px;
+}
+
+.skincare-ingredients-image {
+    height: auto;
+    width: 100%;
+    margin-top: 300px;
+    align-self: end;
+}
+
+.skincare-ingredients-image img {
+    width: 100%;
+    height: 332px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-left: 0;
+}
+
+.last-buttons {
+    border-bottom: 1px solid #d4d4d4;   
+}
+
+.number-2, .gap-5, .steps-image-2, .gap-6, .steps-info-2 {
+    border-bottom: 1px solid #d4d4d4;
+}
+.steps-for-clear-skin {
+    display: grid;
+    grid-template-areas:
+    'number gap steps-image gap-2 steps-info'
+    'number-1 gap-3 steps-image-1 gap-4 steps-info-1'
+    'number-2 gap-5 steps-image-2 gap-6 steps-info-2';
+    grid-template-columns: 0.01fr 1fr 100px 1fr 4fr;
+    grid-template-rows: 100px 100px 100px;
+    column-gap: 0;
+    row-gap: 10px;
+    padding: 30px;
+    background-color: #fbf3ea;
+}
+
+.gap, .gap-2, .gap-3, .gap-4, .gap-5, .gap-6 {
+    border-top: 1px solid #d4d4d4;
+}
+
+.number, .number-1, .number-2 {
+    font-size: 23px;
+    align-content: center;
+}
+
+.steps-info-1, .steps-info-2, .number, .steps-image, .steps-info, .number-1, .steps-image-1, .number-2, .steps-image-2 {
+    border-top: 1px solid #d4d4d4;
+}
+
+.steps-image img, .steps-image-1 img, .steps-image-2 img {
+    border: 3px solid white;
+    border-radius: 10px;
+
+}
+
+.steps-image, .steps-image-1, .steps-image-2 {
+    padding: 12px 0;
+}
+
+.steps-info, .steps-info-1, .steps-info-2{
+    align-content: center;
+}
+
+
+.steps-info div:first-child, .steps-info-1 div:first-child, .steps-info-2 div:first-child {
+    margin-bottom: 7px;
+}
+
+.steps-info div:nth-child(2), .steps-info-1 div:nth-child(2), .steps-info-2 div:nth-child(2) {
+    font-size: 12px;
+}
+
+.background-container {
+    width: 100%;  
+    text-align: center;
+
+}
+
+.background {
+    height: auto;
+    background: url('/images/quinten-de-graaf-bUWwZ-4NCXY-unsplash.jpg');
+    background-size: cover;
+    
+}
+
+.background-info {
+    padding: 20% 0 3% 0;
+    color: white;
+    width: 70%;
+    margin-left: 14%;
+}
+
+.background-info div:nth-child(2) {
+    font-size: 37px;
+    font-weight: 100;
+    margin: 0 0 12px 0;
+}
+
+.last-button {
+    border: none;
+    font-size: 12px;
+    width: 120px;
+    padding: 10px 8px;
+    border-radius: 7px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 30px 30px;
+    gap: 15px;
+}
+
+.footer-2 div {
+    padding: 0 0 10px 0;
+}
+
+.footer-2 div:not(:first-child) {
+    font-size: 13px;
+}
+
+.footer-2 button {
+    background-color:rgb(237, 227, 215); 
+    width: 220px;
+    padding: 8px 7px;
+    display: flex;
+    border: 1px solid #b7b2ac;
+    justify-content: space-between;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.lower-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 30px 30px;
+    font-size: 13px;
+}
+
+.heading-1 {
+    font-size: 35px;
+    font-weight: 100;
+    line-height: 52px;
+    margin-top: 20px;
+}
+
+.info {
+    align-content: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.info p {
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.info button {
+    padding: 7px 8px;
+    width: 120px;
+    background-color: white;
+    outline: none;
+    border: 1.3px solid #3A1F03;
+    border-radius: 5px;
+    margin: 14px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info button:hover, .last-button:hover, .footer-2 button:hover, nav ul li a:hover, .grid7 button:hover, .arrow-button1:hover {
+    background-color: #3A1F03;
+    color: white;
+    cursor: pointer;
+
+}
+
+.fa-solid {
+    font-size: 14px;
+}
+
+@media (max-width: 599px) {
+    .products-container-grid1, .products-container-grid1-2 {
+        margin: 12px 100px 0 100px;
+        font-size: 10px;
+    }
+    .grid7 p:first-child {
+        font-size: 14px;
+    }
+    .grid7 p:nth-child(2) {
+        font-size: 10px;
+        margin: 10px -40px;
+    }
+    .grid7-content {
+        margin: 0 100px;
+    }
+    .products-container-grid1 p:last-child, .products-container-grid1-2 p:last-child {
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+    }
+    .heading-1 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        margin-top: 20px;
+    }
+    
+    .info {
+        align-content: center;
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .info p {
+        line-height: 20px;
+        font-size: 10px;
+    }
+
+    .info button {
+        padding: 6px 7px;
+        width: 100px;
+    }
+    
+    .skincare-ingredients-info-container {
+        margin-top: 35px;
+    }
+    .skincare-ingredients-heading p:nth-child(2) {
+        font-size: 25px;
+    }
+
+    .background-info div:nth-child(2) {
+        font-size: 20px;
+    }
+
+    .background-info div:first-child {
+        font-size: 12px;
+    }
+
+    .last-button {
+        font-size: 10px;
+        width: 100px;
+        padding: 8px 9px;
+    }
+        
+    .background-info {
+            padding: 24% 0 3% 0;
+            width: 90%;
+            margin-left: 5%;
+        }
+        .footer-2 div:first-child, .footer-1 div:first-child, .lower-footer {
+            font-size: 12px;
+        }
+
+        .footer-2 div:not(:first-child), .footer-1 div:not(:first-child) {
+            font-size: 11px;
+        }
+    
+    .steps-info div:first-child, .steps-info-1 div:first-child, .steps-info-2 div:first-child  {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .footer-2 button { 
+            width: 140px;
+            padding: 8px 7px;
+            font-size: 10px;
+        }
+}
+
+@media (min-width: 600px) and (max-width: 1100px) {
+    .grid7-content {
+        margin: 0 100px;
+    }
+    .products-container-grid1, .products-container-grid1-2 {
+        margin: 12px 70px 0 70px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skincare-ingredients {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    .skincare-ingredients-image {
+            display: none;
+    }
+
+    .skincare-ingredients-heading2 {
+        width: 100%; /* Ensure heading width is responsive */
+    }
+}
