@@ -425,7 +425,7 @@ padding: 19px 24px;
 
 .background {
     height: auto;
-    background: url('/images/quinten-de-graaf-bUWwZ-4NCXY-unsplash.jpg');
+    background: url('./images/quinten-de-graaf-bUWwZ-4NCXY-unsplash.jpg');
     background-size: cover;
     
 }
